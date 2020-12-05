@@ -1,13 +1,13 @@
 <template>
   <div id="box">
     <p id="top">Alumni News</p>
-    <div v-for="(news, index) in newsData" v-bind:key="index">
+    <div class="news" v-for="(news, index) in newsData" v-bind:key="index">
       <b-container>
         <b-row>
-          <b-col lg="4" sm="4">
+          <b-col md="4"  sm="4" lg="4">
             <b-img :src="`http://localhost:3000/${news.path}`" class="photo"></b-img>
           </b-col>
-          <b-col lg="8" sm="8">
+          <b-col md="8"  sm="8" lg="8">
             <p class="title"><strong>{{news.title}}</strong></p>
             <p id="content">{{news.content}}</p>
             <p class="date">{{news.date}}</p>
@@ -97,6 +97,7 @@ export default {
   box-shadow: 0 0 10px black;
   margin: 20px auto;
   display: table;
+  max-width: 1000px;
 }
 ul{
   list-style: none;
@@ -133,5 +134,8 @@ p{
 }
 .title{
   font-size: 18px;
+}
+.news{
+  width: 1000px;
 }
 </style>
