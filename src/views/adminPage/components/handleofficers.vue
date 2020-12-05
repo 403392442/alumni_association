@@ -83,7 +83,7 @@
           <p>Phone: <b>{{officer.phone}}</b></p>
           <p>Email: <b>{{officer.email}}</b></p>
           <button class="deleteButton" @click.prevent="deleteOfficerFunction(officer.name)">delete</button>
-          <button class="changeButton" @click.prevent="clickChangeOfficer(index, officer.name, officer.phone, officer.email, officer.description)">change</button>
+          <button class="changeButton" @click.prevent="clickChangeOfficer(index, officer.name, officer.phone, officer.email, officer.description, officer.path)">change</button>
           <b-form @submit.prevent="submitChange" v-show="showChange[index]">
             <b-form-group label-cols="4" label-cols-lg="2" label="Officer Name:">
               <b-form-input v-model="findOfficer.name" type="text" required></b-form-input>
@@ -272,7 +272,7 @@ export default {
       })
     },
 
-    clickChangeOfficer(index, name, phone, email, description) {
+    clickChangeOfficer(index, name, phone, email, description, path) {
       for (let i = 0; i < 11; i++){
         this.$set(this.showChange, i, false)
       }
@@ -281,6 +281,7 @@ export default {
       this.findOfficer.phone = phone
       this.findOfficer.email = email
       this.findOfficer.description = description
+      this.findOfficer.path = path
       this.showFindChange = false
     },
 
