@@ -1,13 +1,13 @@
 <template>
   <div id="box">
-    <p id="top">Alumni News</p>
+    <div id="top">Alumni News</div>
     <div class="news" v-for="(news, index) in newsData" v-bind:key="index">
       <b-container>
         <b-row>
-          <b-col md="4"  sm="4" lg="4">
+          <b-col md="5"  sm="12" lg="4">
             <b-img :src="`http://localhost:3000/${news.path}`" class="photo"></b-img>
           </b-col>
-          <b-col md="8"  sm="8" lg="8">
+          <b-col md="7"  sm="12" lg="8">
             <p class="title"><strong>{{news.title}}</strong></p>
             <p id="content">{{news.content}}</p>
             <p class="date">{{news.date}}</p>
@@ -95,8 +95,7 @@ export default {
   border: 1px solid;
   border-radius: 10px;
   box-shadow: 0 0 10px black;
-  margin: 20px auto;
-  display: table;
+  margin: 0 auto;
   max-width: 1000px;
 }
 ul{
@@ -118,11 +117,11 @@ p{
   max-height: 170px;
 }
 #top{
-  text-align: center;
-  color: white;
-  background-color: #800001;
-  margin-bottom: 30px;
   font-size: 25px;
+  color: white;
+  text-align: center;
+  background-color: #800001;
+  margin-bottom: 10px;
 }
 .button{
   margin-top: 10px;
