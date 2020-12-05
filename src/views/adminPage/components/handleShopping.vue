@@ -1,5 +1,5 @@
 <template>
-  <div id="box">
+  <div id="box" v-show="isReady">
     <div>
       <b-form @submit.prevent="addProductFunction">
         <h4>Add product</h4>
@@ -30,7 +30,7 @@
 
     <div v-show="isShowCrop">
       <div size="120" class="user" style="margin: 0 auto">
-        <b-icon class="icon primary white--text" @click="$refs.FileInput.click()">add picutre</b-icon>
+        <b-icon class="icon primary white--text" @click="$refs.FileInput.click()">add picture</b-icon>
         <input ref="FileInput" type="file" style="display: none;" @change="onFileSelect" />
       </div>
       <b-container v-model="dialog" width="500">
@@ -94,7 +94,7 @@
             <p>Price: <b>{{product.price}}</b></p>
             <p>Amount: <b>{{product.amount}}</b></p>
             <button class="deleteButton" @click.prevent="deleteProductFunction(product.name)">delete</button>
-            <button class="changeButton" @click.prevent="clickChangeProduct(index, product.name, product.price, product.size, product.amount, product.description, product.category)">change</button>
+            <button class="changeButton" @click.prevent="clickChangeProduct(index, product.name, product.price, product.size, product.amount, product.description, product.category, product.path)">change</button>
             <b-form @submit.prevent="submitChange" v-show="showChange[index]">
               <b-form-group label-cols="4" label-cols-lg="2" label="Product name:">
                 <b-form-input v-model="findProduct.name" type="text" required></b-form-input>
@@ -103,7 +103,7 @@
                 <b-form-input v-model="findProduct.price" type="number" required></b-form-input>
               </b-form-group>
               <b-form-group label-cols="4" label-cols-lg="2" label="Product size:">
-                <b-form-input v-model="findProduct.size" type="number" required></b-form-input>
+                <b-form-input v-model="findProduct.size" type="text" required></b-form-input>
               </b-form-group>
               <b-form-group label-cols="4" label-cols-lg="2" label="Product amount:">
                 <b-form-input v-model="findProduct.amount" type="number" required></b-form-input>
@@ -149,6 +149,7 @@ export default {
       dialog: false,
       files: '',
 
+      isReady: false,
       isShowAdd: true,
       isShowCrop: false,
       isShowFind: false,
@@ -295,10 +296,11 @@ export default {
         for (let i = 0; i < arrayLength; i++){
           this.productData[i] = this.pageData[i]
         }
+        this.isReady = true
       })
     },
 
-    clickChangeProduct(index, name, price, size, amount, description, category) {
+    clickChangeProduct(index, name, price, size, amount, description, category, path) {
       for (let i = 0; i < 11; i++){
         this.$set(this.showChange, i, false)
       }
@@ -309,6 +311,7 @@ export default {
       this.findProduct.amount = amount
       this.findProduct.description = description
       this.findProduct.category = category
+      this.findProduct.path = path
       this.showFindChange = false
     },
 
