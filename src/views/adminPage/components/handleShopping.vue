@@ -20,7 +20,7 @@
             <b-form-textarea rows="3" v-model="addProduct.description" type="text" required placeholder="Enter product description"></b-form-textarea>
           </b-form-group>
           <b-form-group label-cols="4" label-cols-lg="2" label="Product category:">
-            <b-form-input v-model="addProduct.category" type="text" required placeholder="Enter product description"></b-form-input>
+            <b-form-input v-model="addProduct.category" type="text" required placeholder="Enter product category"></b-form-input>
           </b-form-group>
           <b-button class="button" type="submit">Next</b-button>
         </div>
