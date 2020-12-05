@@ -15,7 +15,7 @@
         <b-form-group label-cols="4" label-cols-lg="2" label="date:">
           <b-form-input v-model="addForm.date" type="date" required placeholder="Enter link"></b-form-input>
         </b-form-group>
-        <b-button class="button" type="submit">Add Volunteer Opportunity</b-button>
+        <b-button class="button" type="submit">Add Event</b-button>
       </b-form>
       <hr>
     </div>
