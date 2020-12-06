@@ -2,7 +2,7 @@
   <div id="box">
     <div class="w-100" id="colorTop"></div>
     <div class="w-100" id="colorBottom">
-      <p id="AA"><b>©2020 by Maggotty Alumni US Northern Region. All Right Reserved <br>
+      <p id="AA"><b>©2020 by Maggotty High Alumni Association US Northern Region. All Right Reserved <br>
       Site Designed by Asian Royal Developers</b></p>
     </div>
     <div style="z-index: 1;">
