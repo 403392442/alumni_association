@@ -18,7 +18,7 @@
             <a href="https://www.facebook.com/Maggotty-High-School-166314800089230">
               <b-img :src="require(`../assets/fb.png`)" style="max-width: 30px"></b-img>
             </a>
-            <a href="https://www.maggottyhigh.com/">
+            <a href="https://www.maggottyhigh.com">
               <b-img :src="require(`../assets/internet.png`)" style="max-width: 30px"></b-img>
             </a>
           </b-col>
