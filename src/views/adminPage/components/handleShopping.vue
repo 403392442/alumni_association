@@ -47,7 +47,7 @@
     </div>
 
     <div>
-      <h4>Change product</h4>
+      <h4>Find product</h4>
       <b-form @submit.prevent="findProductFunction">
         <b-form-group label-cols="4" label-cols-lg="2" label="Product name:">
           <b-form-input v-model="findProduct.name" type="text" required placeholder="Enter product name"></b-form-input>
