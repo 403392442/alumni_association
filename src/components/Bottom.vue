@@ -10,9 +10,9 @@
         <b-row>
           <b-col sm="6">
             Contact Us
-            <p>Maggotty High School</p>
-            <p>P.O Box 4 Maggotty</p>
-            <p>St. Elizabeth. Jamaica, W.I.</p>
+            <p>Maggotty High Alumni Association</p>
+            <p>1301 EAST 233 STREET</p>
+            <p>Bronx NY 10466-5842</p>
             <br>
             <p>Tel: 876-997-2900</p>
             <a href="https://www.facebook.com/Maggotty-High-School-166314800089230">
