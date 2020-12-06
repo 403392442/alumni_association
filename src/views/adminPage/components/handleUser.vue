@@ -162,7 +162,14 @@ export default {
     async submitChange() {
       await this.$axios.post('/admin/updateUser', this.changeForm).then(res=>{
         console.log(res.data)
-        this.$router.go(0)
+        if (this.changeForm.email === this.$cookies.get('email')){
+          alert("please sign in again")
+          this.$cookies.set('email', '')
+          this.$cookies.set('isAdmin', '')
+          this.$router.push('/index')
+        } else {
+          this.$router.go(0)
+        }
       })
     },
 
