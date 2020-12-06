@@ -23,6 +23,7 @@
           <li>Admin: <b>{{changeForm.isAdmin}}</b></li>
         </ul>
 
+
         <button class="deleteButton" @click.prevent="deleteUser(changeForm.email)">delete</button>
         <button class="changeButton" @click="showFindChange = !showFindChange">change</button>
       </div>
@@ -168,7 +169,7 @@ export default {
     async deleteUser(email) {
       let answer = window.confirm("You you sure?")
       if (answer){
-        await this.$axios.post('/admin/deleteEvent', {email: email}).then(res=>{
+        await this.$axios.post('/admin/deleteUser', {email: email}).then(res=>{
           console.log(res.data)
           this.$router.go(0)
         })
