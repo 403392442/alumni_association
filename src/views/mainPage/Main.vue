@@ -1,7 +1,7 @@
 <template>
   <div id="box">
     <div id="border">
-      <span id="text">Welcome to the Maggoty Alumni US Nortern Region Website</span>
+      <span id="text">Welcome to the Maggoty High Alumni Association US Northern Region Website</span>
     </div>
     <Carousel></Carousel>
     <Overview></Overview>
