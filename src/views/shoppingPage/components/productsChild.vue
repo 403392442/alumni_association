@@ -1,6 +1,7 @@
 <template>
 <div id="box">
   <p id="top">Market</p>
+  <a href="/cart"><b-img :src="require(`../../../assets/cart.png`)" style="max-width: 40px"> </b-img></a>
   <b-container>
   <b-card v-for="(product, index) in productData" v-bind:key="index" id="card">
   <b-img :src="'http://localhost:3000/'+product.path" class="profile-img" @click="detailProduct(product.path)" style="max-width: 200px"></b-img>
@@ -57,6 +58,9 @@ export default {
       await this.$axios.get(newUrl).then(res=>{
         this.productData = res.data
       })
+    },
+    goCart() {
+      this.router.push('/cart')
     },
     async getData() {
       await this.$axios.get(url).then(res=>{
