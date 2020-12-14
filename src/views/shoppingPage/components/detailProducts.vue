@@ -5,6 +5,7 @@
       <b-img :src="'http://localhost:3000/'+product.path" class="profile-img" style="max-width: 200px"></b-img>
       <b-card-text class="description"><strong>{{product.description}}</strong></b-card-text>
       <b-card-text>Unit price: {{product.price}}</b-card-text>
+      <b-card-text>Size: {{product.size}}</b-card-text>
       <b-card-text>Available amount: {{product.amount}}</b-card-text>
     </b-card>
     <b-form @submit.prevent="onSubmit">
